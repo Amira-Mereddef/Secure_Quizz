@@ -1,14 +1,10 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import React from 'react';
+import QuizCreator from './components/quizz_creator'; 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<h1>Home</h1>} />
-        <Route path="/about" element={<h1>About</h1>} />
-        <Route path="/contact" element={<h1>Contact</h1>} />
-      </Routes>
-    </Router>
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
+      <QuizCreator />
+    </div>
   );
 }
 
