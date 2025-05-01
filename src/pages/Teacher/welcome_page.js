@@ -1,6 +1,6 @@
 import QMark from "../../assets/images/qmark_login.svg";
 
-export default function StudentHome() {
+export default function TeacherHome() {
   return (
     <div className="h-screen w-full bg-white relative">
       {/* Main content */}
@@ -33,13 +33,13 @@ export default function StudentHome() {
               {/* Left side text */}
               <div className="text-white">
                 <h2 className="text-3xl md:text-4xl font-normal md:text-white text-oceanblue">
-                  Answer & Receive
+                  Create
                 </h2>
                 <h3 className="text-3xl md:text-4xl font-bold text-gray-700 mb-2">
                   Secure Quizzes
                 </h3>
                 <h2 className="text-3xl md:text-4xl md:text-white text-oceanblue">
-                  from your teachers !
+                  for your students !
                 </h2>
               </div>
 
@@ -49,7 +49,7 @@ export default function StudentHome() {
                   href="#"
                   className="bg-[#3791b4] hover:bg-[#2d7a96] text-white font-medium py-2 px-6 rounded transition-colors"
                 >
-                  New received quizzes
+                  New Quiz
                 </a>
 
                 <div className="font-medium text-white px-2">OR</div>
@@ -58,7 +58,7 @@ export default function StudentHome() {
                   href="#"
                   className="bg-[#273e4c] hover:bg-[#1a2a33] text-white font-medium py-2 px-6 rounded transition-colors"
                 >
-                  Quizzes answers results
+                  View Quizzes
                 </a>
               </div>
             </div>
