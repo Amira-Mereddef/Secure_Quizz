@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react'; 
-import { Link } from 'react-router-dom';  // Import Link from react-router-dom
+import React, { useState, useEffect } from 'react';
 
 export default function ViewQuizzes() {
   const [quizzes, setQuizzes] = useState([]);
@@ -104,7 +103,7 @@ export default function ViewQuizzes() {
         const sampleQuizzes = Array(10).fill(null).map((_, index) => ({
           id: index + 1,
           title: `Quiz 01`,
-          date: '11/01/2025',
+          date: `${10 + index}/20`, 
         }));
         setQuizzes(sampleQuizzes);
         setLoading(false);
@@ -129,15 +128,14 @@ export default function ViewQuizzes() {
 
         <div style={styles.header}>
           <div style={styles.titleHeader}>Quiz Title</div>
-          <div style={styles.dateHeader}>Date</div>
+          <div style={styles.dateHeader}>Score</div>
         </div>
 
         <div style={styles.quizList}>
           {quizzes.map((quiz) => (
             <div key={quiz.id} style={styles.quizItem}>
-              {/* Remove dynamic ID and direct to static path */}
-              <Link
-                to="/quiz_submissions" // Now, this leads directly to the submissions page without ID
+              <a
+                href={`/quiz/${quiz.id}`}
                 style={styles.quizLinkWrapper}
                 onMouseOver={(e) => {
                   e.currentTarget.style.backgroundColor = '#f5f5f5';
@@ -150,7 +148,7 @@ export default function ViewQuizzes() {
               >
                 <div style={styles.quizTitle}>{quiz.title}</div>
                 <div style={styles.quizDate}>{quiz.date}</div>
-              </Link>
+              </a>
             </div>
           ))}
         </div>

@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import DeleteIcon from '../../assets/delete.svg';
+
 export default function QuizCreator() {
   const [questions, setQuestions] = useState([
     {

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';  // Import Link for navigation
 import QMark from "../../assets/images/qmark_login.svg";
 
 export default function StudentHome() {
@@ -45,21 +46,23 @@ export default function StudentHome() {
 
               {/* Links with OR */}
               <div className="flex flex-col md:flex-row items-center gap-4">
-                <a
-                  href="#"
+                {/* Link to "New received quizzes" */}
+                <Link
+                  to="/quiz_header"  // Navigate to the new quizzes page
                   className="bg-[#3791b4] hover:bg-[#2d7a96] text-white font-medium py-2 px-6 rounded transition-colors"
                 >
                   New received quizzes
-                </a>
+                </Link>
 
                 <div className="font-medium text-white px-2">OR</div>
 
-                <a
-                  href="#"
+                {/* Link to "Quizzes answers results" */}
+                <Link
+                  to="/student_view_quizzes"  // Navigate to the quizzes results page
                   className="bg-[#273e4c] hover:bg-[#1a2a33] text-white font-medium py-2 px-6 rounded transition-colors"
                 >
                   Quizzes answers results
-                </a>
+                </Link>
               </div>
             </div>
           </div>
